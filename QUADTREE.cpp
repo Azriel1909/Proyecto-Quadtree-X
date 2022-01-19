@@ -215,15 +215,22 @@ int main()
     Node a(Point(1, 1), 1);
     Node b(Point(2, 5), 2);
     Node c(Point(7, 6), 3);
+    Node d(Point(9, 8), 4);
     center.insert(&a);
     center.insert(&b);
     center.insert(&c);
+    center.insert(&d);
     cout << "Node a: " <<
         center.search(Point(1, 1))->data << "\n";
     cout << "Node b: " <<
         center.search(Point(2, 5))->data << "\n";
     cout << "Node c: " <<
         center.search(Point(7, 6))->data << "\n";
+    //Se agrego un nuevo nodo al código original.
+    // Nodo d con los puntos Node d(Point(9, 8), 4);
+    //Commit II
+    cout <<" Node d: " <<
+        center.search(Point(9, 8))->data << "\n";
     cout << "Non-existing node: "
         << center.search(Point(5, 5));
     return 0;
